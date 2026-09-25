@@ -1,0 +1,232 @@
+{
+  "tool": {
+    "id": "spesi",
+    "title": "sPESI (PESI simplificado)",
+    "short": "Prognóstico em 30 dias no TEP agudo",
+    "desc": "Calculadora sPESI (PESI simplificado): mortalidade em 30 dias no tromboembolismo pulmonar agudo e identificação do paciente de baixo risco.",
+    "lead": "Estima a mortalidade em 30 dias de pacientes com TEP agudo confirmado e sem instabilidade hemodinâmica, identificando os de baixo risco.",
+    "spec": [
+      "pneumologia",
+      "cardiologia",
+      "medicina-de-emergencia",
+      "medicina-intensiva",
+      "clinica-medica"
+    ],
+    "fields": [
+      [
+        "idade",
+        "Idade &gt; 80 anos",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "cancer",
+        "Câncer (ativo ou tratado no último ano)",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "cardiopulm",
+        "Doença cardiopulmonar crônica (insuficiência cardíaca ou doença pulmonar crônica)",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "fc",
+        "FC ≥ 110 bpm",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "pas",
+        "PA sistólica &lt; 100 mmHg",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "sat",
+        "SatO₂ &lt; 90%",
+        "chk",
+        {
+          "pts": 1
+        }
+      ]
+    ],
+    "score": {
+      "label": "sPESI",
+      "bands": [
+        [
+          0,
+          "low",
+          "Baixo risco: mortalidade em 30 dias de 1,0%",
+          "Candidato a alta precoce ou tratamento domiciliar, se não houver outros impeditivos (critérios de Hestia)."
+        ],
+        [
+          1,
+          "mid",
+          "Não é baixo risco: mortalidade em 30 dias de 10,9%",
+          "Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina."
+        ]
+      ]
+    },
+    "formula": "<p>Um ponto para cada item: idade &gt; 80, câncer, doença cardiopulmonar crônica, FC ≥ 110, PAS &lt; 100 e SatO₂ &lt; 90%. Zero ponto = baixo risco; ≥ 1 ponto = alto risco pelo sPESI.</p>",
+    "table": [
+      [
+        "sPESI",
+        "Mortalidade em 30 dias (derivação)",
+        "Validação (RIETE)"
+      ],
+      [
+        "0",
+        "1,0%",
+        "1,1%"
+      ],
+      [
+        "≥ 1",
+        "10,9%",
+        "8,9%"
+      ]
+    ],
+    "tips": [
+      "Paciente com choque ou hipotensão persistente é TEP de alto risco: o sPESI não se aplica e a conduta é reperfusão.",
+      "Pela ESC 2019, sPESI ≥ 1 classifica o paciente como risco intermediário; disfunção de VD mais troponina positiva define intermediário-alto (monitorização, reperfusão de resgate se piorar).",
+      "Mesmo com sPESI 0, disfunção de VD na imagem ou troponina elevada afastam o paciente da alta precoce.",
+      "Para alta precoce, avalie também sangramento, dor, necessidade de oxigênio e condições sociais (critérios de Hestia)."
+    ],
+    "sources": [
+      [
+        "Jiménez D et al. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med, 2010.",
+        "https://doi.org/10.1001/archinternmed.2010.199"
+      ],
+      [
+        "Konstantinides SV et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J, 2020.",
+        "https://doi.org/10.1093/eurheartj/ehz405"
+      ]
+    ],
+    "cases": [
+      [
+        "Sem nenhum critério: baixo risco",
+        [],
+        {
+          "score": 0,
+          "level": "low",
+          "verdict": "1,0%"
+        }
+      ],
+      [
+        "Câncer ativo: 1 ponto",
+        {
+          "cancer": true
+        },
+        {
+          "score": 1,
+          "level": "mid"
+        }
+      ],
+      [
+        "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        {
+          "idade": true,
+          "fc": true,
+          "sat": true
+        },
+        {
+          "score": 3,
+          "level": "mid",
+          "verdict": "10,9%"
+        }
+      ]
+    ],
+    "batch": "torax-vascular",
+    "kind": "Escore",
+    "config": {
+      "unit": "",
+      "label": "sPESI",
+      "fields": [
+        [
+          "idade",
+          "chk",
+          1
+        ],
+        [
+          "cancer",
+          "chk",
+          1
+        ],
+        [
+          "cardiopulm",
+          "chk",
+          1
+        ],
+        [
+          "fc",
+          "chk",
+          1
+        ],
+        [
+          "pas",
+          "chk",
+          1
+        ],
+        [
+          "sat",
+          "chk",
+          1
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "Baixo risco: mortalidade em 30 dias de 1,0%",
+          "Candidato a alta precoce ou tratamento domiciliar, se não houver outros impeditivos (critérios de Hestia)."
+        ],
+        [
+          1,
+          "mid",
+          "Não é baixo risco: mortalidade em 30 dias de 10,9%",
+          "Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina."
+        ]
+      ]
+    },
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/torax-vascular.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/torax-vascular.php",
+    "sha256": "e99bbd1938580ff9b46e0252fdd8cb72e87c63869f934005b8ef6d807ce8b6e2",
+    "bytes": 91275
+  },
+  "clinicalValidation": "not-performed"
+}

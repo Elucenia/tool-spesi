@@ -1,0 +1,46 @@
+[
+  {
+    "label": "Sem nenhum critério: baixo risco",
+    "input": {},
+    "expected": {
+      "score": 0,
+      "level": "low",
+      "verdict": "1,0%"
+    },
+    "originalInput": [],
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Câncer ativo: 1 ponto",
+    "input": {
+      "cancer": true
+    },
+    "expected": {
+      "score": 1,
+      "level": "mid"
+    },
+    "originalInput": {
+      "cancer": true
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+    "input": {
+      "idade": true,
+      "fc": true,
+      "sat": true
+    },
+    "expected": {
+      "score": 3,
+      "level": "mid",
+      "verdict": "10,9%"
+    },
+    "originalInput": {
+      "idade": true,
+      "fc": true,
+      "sat": true
+    },
+    "expandedZeroOptions": []
+  }
+]
