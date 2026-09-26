@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-spesi",
   "version": "0.1.0",
-  "description": "sPESI (PESI simplificado) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "sPESI (PESI simplificado) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
