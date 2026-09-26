@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-spesi · Elucenia · https://github.com/Elucenia/tool-spesi
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"spesi","title":"sPESI (PESI simplificado)","fields":[["idade","Idade &gt; 80 anos","chk",{"pts":1}],["cancer","Câncer (ativo ou tratado no último ano)","chk",{"pts":1}],["cardiopulm","Doença cardiopulmonar crônica (insuficiência cardíaca ou doença pulmonar crônica)","chk",{"pts":1}],["fc","FC ≥ 110 bpm","chk",{"pts":1}],["pas","PA sistólica &lt; 100 mmHg","chk",{"pts":1}],["sat","SatO₂ &lt; 90%","chk",{"pts":1}]],"config":{"unit":"","label":"sPESI","fields":[["idade","chk",1],["cancer","chk",1],["cardiopulm","chk",1],["fc","chk",1],["pas","chk",1],["sat","chk",1]],"bands":[[0,"low","Baixo risco: mortalidade em 30 dias de 1,0%","Candidato a alta precoce ou tratamento domiciliar, se não houver outros impeditivos (critérios de Hestia)."],[1,"mid","Não é baixo risco: mortalidade em 30 dias de 10,9%","Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
