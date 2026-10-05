@@ -5,6 +5,7 @@
     "short": "Prognóstico em 30 dias no TEP agudo",
     "desc": "Calculadora sPESI (PESI simplificado): mortalidade em 30 dias no tromboembolismo pulmonar agudo e identificação do paciente de baixo risco.",
     "lead": "Estima a mortalidade em 30 dias de pacientes com TEP agudo confirmado e sem instabilidade hemodinâmica, identificando os de baixo risco.",
+    "kind": "Escore",
     "spec": [
       "pneumologia",
       "cardiologia",
@@ -17,92 +18,40 @@
         "idade",
         "Idade &gt; 80 anos",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "cancer",
         "Câncer (ativo ou tratado no último ano)",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "cardiopulm",
         "Doença cardiopulmonar crônica (insuficiência cardíaca ou doença pulmonar crônica)",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "fc",
         "FC ≥ 110 bpm",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "pas",
         "PA sistólica &lt; 100 mmHg",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "sat",
         "SatO₂ &lt; 90%",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ]
     ],
-    "score": {
-      "label": "sPESI",
-      "bands": [
-        [
-          0,
-          "low",
-          "Baixo risco: mortalidade em 30 dias de 1,0%",
-          "Candidato a alta precoce ou tratamento domiciliar, se não houver outros impeditivos (critérios de Hestia)."
-        ],
-        [
-          1,
-          "mid",
-          "Não é baixo risco: mortalidade em 30 dias de 10,9%",
-          "Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina."
-        ]
-      ]
-    },
     "formula": "<p>Um ponto para cada item: idade &gt; 80, câncer, doença cardiopulmonar crônica, FC ≥ 110, PAS &lt; 100 e SatO₂ &lt; 90%. Zero ponto = baixo risco; ≥ 1 ponto = alto risco pelo sPESI.</p>",
-    "table": [
-      [
-        "sPESI",
-        "Mortalidade em 30 dias (derivação)",
-        "Validação (RIETE)"
-      ],
-      [
-        "0",
-        "1,0%",
-        "1,1%"
-      ],
-      [
-        "≥ 1",
-        "10,9%",
-        "8,9%"
-      ]
-    ],
-    "tips": [
-      "Paciente com choque ou hipotensão persistente é TEP de alto risco: o sPESI não se aplica e a conduta é reperfusão.",
-      "Pela ESC 2019, sPESI ≥ 1 classifica o paciente como risco intermediário; disfunção de VD mais troponina positiva define intermediário-alto (monitorização, reperfusão de resgate se piorar).",
-      "Mesmo com sPESI 0, disfunção de VD na imagem ou troponina elevada afastam o paciente da alta precoce.",
-      "Para alta precoce, avalie também sangramento, dor, necessidade de oxigênio e condições sociais (critérios de Hestia)."
-    ],
     "sources": [
       [
         "Jiménez D et al. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med, 2010.",
@@ -147,58 +96,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "",
-      "label": "sPESI",
-      "fields": [
-        [
-          "idade",
-          "chk",
-          1
-        ],
-        [
-          "cancer",
-          "chk",
-          1
-        ],
-        [
-          "cardiopulm",
-          "chk",
-          1
-        ],
-        [
-          "fc",
-          "chk",
-          1
-        ],
-        [
-          "pas",
-          "chk",
-          1
-        ],
-        [
-          "sat",
-          "chk",
-          1
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "Baixo risco: mortalidade em 30 dias de 1,0%",
-          "Candidato a alta precoce ou tratamento domiciliar, se não houver outros impeditivos (critérios de Hestia)."
-        ],
-        [
-          1,
-          "mid",
-          "Não é baixo risco: mortalidade em 30 dias de 10,9%",
-          "Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -207,17 +104,483 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T16:56:01.138Z",
+      "total": 64,
+      "passed": 64,
+      "sourceRowCount": 64,
+      "uniqueApiInputCount": 64,
+      "sourceContextCount": 64,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "3b6fdd947a92a402e1f34ac873fc1479af14f521bfd9da730e9cf880de4c5aea",
+        "total": 64,
+        "bankRowCount": 64,
+        "uniqueApiInputCount": 64,
+        "sourceContextCount": 64,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+            "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+          },
+          {
+            "file": "reports/review-20261003/eight-risk-independent-expectations-final26.json",
+            "sha256": "f5e7d0e09fb4dadaa01dd489cbca1ad3ee8e847771b8409947f3fc43ad7f4a82"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+          "sha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce"
+        },
+        "packagingRequirement": "Copy this score-only complete bank into fresh frozen26 packages only after metadata/source composition and independent peer."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 64,
+        "uniqueApiInputs": 64,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+          "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+        }
+      },
+      "scope": "Exact weighted integer sum of 64 exhaustive represented caller-selected point/binary tuples for spesi. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Original252 internal mid-versus-high discrepancies remain recorded and unresolved outside this sum-only scope.",
+      "sources": [
+        {
+          "id": "spesi",
+          "edition": "Jimenez2010 simplified PESI, not original eleven-variable PESI",
+          "url": "https://www.riete.org/estimate/cod/simplification-pulmonary-embolism-severity-index-prognostication-patients-acute-symptomatic-pulmonary-embolism.pdf",
+          "doi": "10.1001/archinternmed.2010.199",
+          "access": "Original PDF downloaded from author registry RIETE; Methods/Table1 and score/group paragraphs read; Table1 visually inspected.",
+          "readScope": [
+            "PDFp2 Methods/patient eligibility and simplification",
+            "PDFp3 Table1/results, printed1385"
+          ],
+          "notVerified": [
+            "Present clinical identification of each condition",
+            "Outpatient/discharge safety, treatment or zero-risk assertion",
+            "Independent confirmation of active/last-year restriction in the source referenced by current schema"
+          ],
+          "sourceComponent": "Selected integer point sum only; detailed clinical cohort/band facts remain in the frozen original source review."
+        }
+      ],
+      "evidencePath": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+      "evidenceSha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce",
+      "originalEvidence": {
+        "file": "reports/review-20261003/eight-risk-independent-source-check-final26.json",
+        "sha256": "b816fcbdbc88a75d30dba462f1d7a1ecfacb49b3d5487709ee9d1bd470c6d832"
+      },
+      "independentPeer": {
+        "status": "passed",
+        "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred.",
+        "recordedAt": "2026-10-04T18:58:12.723Z",
+        "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+        "previousStatus": {
+          "status": "pending",
+          "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred."
+        },
+        "peer": {
+          "file": "reports/review-20261003/eight-point-total-source-evidence-independent-peer-final26-r2.json",
+          "sha256": "6d1b854d021eef9f0f5916ed7f81a70dc8359dae5824f2508c70d29b33732d5c",
+          "summary": {
+            "checks": 8278,
+            "failed": 0,
+            "methods": 8,
+            "sourceRows": 1132,
+            "uniqueInputs": 1132,
+            "freshExecutions": 3396,
+            "helperAssertions": 6888,
+            "metadataMethods": 128,
+            "metadataRows": 53752,
+            "metadataUnique": 53680,
+            "metadataRepeats": 72
+          },
+          "scope": "Root independent peer of exact46 preimages/afterimages; independently frozen1132 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all18 previous scopes;24 fresh Node helper executions replay all8 selected-point components without clinical approval."
+        },
+        "application": {
+          "file": "reports/review-20261003/eight-point-total-source-evidence-application-final26.json",
+          "sha256": "ff192c36cc1774e583fe2b8bcdd2e10b275e774ff633d180534b012cfe5b87e3"
+        },
+        "reviewedBankScope": "Exact weighted integer sum of 64 exhaustive represented caller-selected point/binary tuples for spesi. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Original252 internal mid-versus-high discrepancies remain recorded and unresolved outside this sum-only scope.",
+        "currentBinding": {
+          "source26BankSha256": "6dfe7c282a2686461ddb351c1a235a2e670636d3c03cdc255d9c78b4e00a2136",
+          "implementations": [
+            {
+              "file": "apps/website/private/tool-code/spesi/calculator.js",
+              "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+            },
+            {
+              "file": "apps/dashboard/private/tool-code/spesi/calculator.js",
+              "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+            },
+            {
+              "file": "apps/command-center/private/tool-code/spesi/calculator.js",
+              "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+            }
+          ],
+          "subsequentReviewedRebinds": []
+        },
+        "originalFailuresAndScopeQualificationsPreserved": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "actualAdapterExecutions": 192,
+      "actualVmExecutions": 192,
+      "implementations": [
+        {
+          "id": "spesi",
+          "app": "website",
+          "file": "apps/website/private/tool-code/spesi/calculator.js",
+          "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+        },
+        {
+          "id": "spesi",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/spesi/calculator.js",
+          "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+        },
+        {
+          "id": "spesi",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/spesi/calculator.js",
+          "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+        }
+      ],
+      "qualifications": [
+        "Exact weighted integer sum of 64 exhaustive represented caller-selected point/binary tuples for spesi. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Original252 internal mid-versus-high discrepancies remain recorded and unresolved outside this sum-only scope.",
+        "All862 historical fixtures and every field/formula/version/approval unchanged by this candidate. Original source/clinical failures and edition warnings are not overwritten.",
+        "Four inline metadata rows are only a subset of the complete hashed downloadable bank. Independent professional/clinical/rights and full-method approvals are not performed."
+      ],
+      "excludedOriginalFailures": {
+        "count": 252,
+        "field": "Internal sPESI level representation only",
+        "status": "preserved-unresolved-not-promoted",
+        "originalReport": {
+          "file": "reports/review-20261003/eight-risk-independent-source-check-final26.json",
+          "sha256": "b816fcbdbc88a75d30dba462f1d7a1ecfacb49b3d5487709ee9d1bd470c6d832"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "s PESI/Jimenez 2010:6 variáveisbinárias,0 baixoriscorestantealto; sem PESIoriginal 11 variáveis",
+    "implementationVersion": "spesi@native-2026-10-03+8614704a7c8c",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/20696966/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Um ponto para cada item: idade > 80, câncer, doença cardiopulmonar crônica, FC ≥ 110, PAS < 100 e SatO₂ < 90%. Zero ponto = baixo risco; ≥ 1 ponto = alto risco pelo sPESI.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "idade",
+            "label": "Idade &gt; 80 anos",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "cancer",
+            "label": "Câncer (ativo ou tratado no último ano)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "cardiopulm",
+            "label": "Doença cardiopulmonar crônica (insuficiência cardíaca ou doença pulmonar crônica)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "fc",
+            "label": "FC ≥ 110 bpm",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pas",
+            "label": "PA sistólica &lt; 100 mmHg",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "sat",
+            "label": "SatO₂ &lt; 90%",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "b56c09788ac4e685e837e244b31f7386c285f695909e8b7063439b992a4cb3d3"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Jiménez D et al. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med, 2010.",
+          "url": "https://doi.org/10.1001/archinternmed.2010.199",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism.",
+            "year": "2010",
+            "firstPublicationDate": "2010-08-01",
+            "doi": "10.1001/archinternmed.2010.199",
+            "pmid": "20696966",
+            "journal": "Archives of internal medicine",
+            "authors": "Jiménez D, Aujesky D, Moores L, Gómez V, Lobo JL, Uresandi F, Otero R, Monreal M, Muriel A, Yusen RD, RIETE Investigators."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/20696966/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "34d64c5f4160761531587972aff05f03dff0f96c000a8f50ee84565bf12cc71e",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Konstantinides SV et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J, 2020.",
+          "url": "https://doi.org/10.1093/eurheartj/ehz405",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS).",
+            "year": "2020",
+            "firstPublicationDate": "2020-01-01",
+            "doi": "10.1093/eurheartj/ehz405",
+            "pmid": "31504429",
+            "journal": "European heart journal",
+            "authors": "Konstantinides SV, Meyer G, Becattini C, Bueno H, Geersing GJ, Harjola VP, Huisman MV, Humbert M, Jennings CS, Jiménez D, Kucher N, Lang IM, Lankeit M, Lorusso R, Mazzolai L, Meneveau N, Ní Áinle F, Prandoni P, Pruszczyk P, Righini M, Torbicki A, Van Belle E, Zamorano JL, ESC Scientific Document Group."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/31504429/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T16:56:01.138Z",
+        "total": 64,
+        "passed": 64,
+        "sourceRowCount": 64,
+        "uniqueApiInputCount": 64,
+        "sourceContextCount": 64,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "3b6fdd947a92a402e1f34ac873fc1479af14f521bfd9da730e9cf880de4c5aea",
+          "total": 64,
+          "bankRowCount": 64,
+          "uniqueApiInputCount": 64,
+          "sourceContextCount": 64,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+              "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+            },
+            {
+              "file": "reports/review-20261003/eight-risk-independent-expectations-final26.json",
+              "sha256": "f5e7d0e09fb4dadaa01dd489cbca1ad3ee8e847771b8409947f3fc43ad7f4a82"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+            "sha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce"
+          },
+          "packagingRequirement": "Copy this score-only complete bank into fresh frozen26 packages only after metadata/source composition and independent peer."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 64,
+          "uniqueApiInputs": 64,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+            "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+          }
+        },
+        "scope": "Exact weighted integer sum of 64 exhaustive represented caller-selected point/binary tuples for spesi. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Original252 internal mid-versus-high discrepancies remain recorded and unresolved outside this sum-only scope.",
+        "sources": [
+          {
+            "id": "spesi",
+            "edition": "Jimenez2010 simplified PESI, not original eleven-variable PESI",
+            "url": "https://www.riete.org/estimate/cod/simplification-pulmonary-embolism-severity-index-prognostication-patients-acute-symptomatic-pulmonary-embolism.pdf",
+            "doi": "10.1001/archinternmed.2010.199",
+            "access": "Original PDF downloaded from author registry RIETE; Methods/Table1 and score/group paragraphs read; Table1 visually inspected.",
+            "readScope": [
+              "PDFp2 Methods/patient eligibility and simplification",
+              "PDFp3 Table1/results, printed1385"
+            ],
+            "notVerified": [
+              "Present clinical identification of each condition",
+              "Outpatient/discharge safety, treatment or zero-risk assertion",
+              "Independent confirmation of active/last-year restriction in the source referenced by current schema"
+            ],
+            "sourceComponent": "Selected integer point sum only; detailed clinical cohort/band facts remain in the frozen original source review."
+          }
+        ],
+        "evidencePath": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+        "evidenceSha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce",
+        "originalEvidence": {
+          "file": "reports/review-20261003/eight-risk-independent-source-check-final26.json",
+          "sha256": "b816fcbdbc88a75d30dba462f1d7a1ecfacb49b3d5487709ee9d1bd470c6d832"
+        },
+        "independentPeer": {
+          "status": "passed",
+          "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred.",
+          "recordedAt": "2026-10-04T18:58:12.723Z",
+          "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+          "previousStatus": {
+            "status": "pending",
+            "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred."
+          },
+          "peer": {
+            "file": "reports/review-20261003/eight-point-total-source-evidence-independent-peer-final26-r2.json",
+            "sha256": "6d1b854d021eef9f0f5916ed7f81a70dc8359dae5824f2508c70d29b33732d5c",
+            "summary": {
+              "checks": 8278,
+              "failed": 0,
+              "methods": 8,
+              "sourceRows": 1132,
+              "uniqueInputs": 1132,
+              "freshExecutions": 3396,
+              "helperAssertions": 6888,
+              "metadataMethods": 128,
+              "metadataRows": 53752,
+              "metadataUnique": 53680,
+              "metadataRepeats": 72
+            },
+            "scope": "Root independent peer of exact46 preimages/afterimages; independently frozen1132 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all18 previous scopes;24 fresh Node helper executions replay all8 selected-point components without clinical approval."
+          },
+          "application": {
+            "file": "reports/review-20261003/eight-point-total-source-evidence-application-final26.json",
+            "sha256": "ff192c36cc1774e583fe2b8bcdd2e10b275e774ff633d180534b012cfe5b87e3"
+          },
+          "reviewedBankScope": "Exact weighted integer sum of 64 exhaustive represented caller-selected point/binary tuples for spesi. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Original252 internal mid-versus-high discrepancies remain recorded and unresolved outside this sum-only scope.",
+          "currentBinding": {
+            "source26BankSha256": "6dfe7c282a2686461ddb351c1a235a2e670636d3c03cdc255d9c78b4e00a2136",
+            "implementations": [
+              {
+                "file": "apps/website/private/tool-code/spesi/calculator.js",
+                "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+              },
+              {
+                "file": "apps/dashboard/private/tool-code/spesi/calculator.js",
+                "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+              },
+              {
+                "file": "apps/command-center/private/tool-code/spesi/calculator.js",
+                "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+              }
+            ],
+            "subsequentReviewedRebinds": []
+          },
+          "originalFailuresAndScopeQualificationsPreserved": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "actualAdapterExecutions": 192,
+        "actualVmExecutions": 192,
+        "implementations": [
+          {
+            "id": "spesi",
+            "app": "website",
+            "file": "apps/website/private/tool-code/spesi/calculator.js",
+            "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+          },
+          {
+            "id": "spesi",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/spesi/calculator.js",
+            "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+          },
+          {
+            "id": "spesi",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/spesi/calculator.js",
+            "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+          }
+        ],
+        "qualifications": [
+          "Exact weighted integer sum of 64 exhaustive represented caller-selected point/binary tuples for spesi. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Original252 internal mid-versus-high discrepancies remain recorded and unresolved outside this sum-only scope.",
+          "All862 historical fixtures and every field/formula/version/approval unchanged by this candidate. Original source/clinical failures and edition warnings are not overwritten.",
+          "Four inline metadata rows are only a subset of the complete hashed downloadable bank. Independent professional/clinical/rights and full-method approvals are not performed."
+        ],
+        "excludedOriginalFailures": {
+          "count": 252,
+          "field": "Internal sPESI level representation only",
+          "status": "preserved-unresolved-not-promoted",
+          "originalReport": {
+            "file": "reports/review-20261003/eight-risk-independent-source-check-final26.json",
+            "sha256": "b816fcbdbc88a75d30dba462f1d7a1ecfacb49b3d5487709ee9d1bd470c6d832"
+          }
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+    },
+    "limits": "sPESI estima prognóstico em TEP agudo, não confirma nem exclui TEP. Baixo risco no estudo ainda apresentou mortes e não representa autorização isolada de tratamento ambulatorial. Instabilidade, comorbidades, fatores clínicos e condições logísticas devem ser avaliados no protocolo correspondente.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:03.143Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não mostra todas as exclusões, cortes de variáveis ou protocolo de alta. Condições de instabilidade e ESC 2019 requerem fonte própria."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/spesi/calculator.js",
+    "bytes": 4901,
+    "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "8e085458f2c990dc67608505f3d8fe355c99b6e341a08c36b85d905de14dec6a",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "a982daa04d7d659ee817067aff6a3f2a323d9adf82700818799bab9c893584c4",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "a982daa04d7d659ee817067aff6a3f2a323d9adf82700818799bab9c893584c4",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

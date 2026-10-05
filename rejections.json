@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean idade",
+    "input": {
+      "idade": "2",
+      "cancer": false,
+      "cardiopulm": false,
+      "fc": false,
+      "pas": false,
+      "sat": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean cancer",
+    "input": {
+      "idade": false,
+      "cancer": "2",
+      "cardiopulm": false,
+      "fc": false,
+      "pas": false,
+      "sat": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cancer"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean cardiopulm",
+    "input": {
+      "idade": false,
+      "cancer": false,
+      "cardiopulm": "2",
+      "fc": false,
+      "pas": false,
+      "sat": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cardiopulm"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean fc",
+    "input": {
+      "idade": false,
+      "cancer": false,
+      "cardiopulm": false,
+      "fc": "2",
+      "pas": false,
+      "sat": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "fc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean pas",
+    "input": {
+      "idade": false,
+      "cancer": false,
+      "cardiopulm": false,
+      "fc": false,
+      "pas": "2",
+      "sat": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean sat",
+    "input": {
+      "idade": false,
+      "cancer": false,
+      "cardiopulm": false,
+      "fc": false,
+      "pas": false,
+      "sat": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "sat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

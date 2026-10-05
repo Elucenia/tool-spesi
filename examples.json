@@ -1,46 +1,121 @@
 [
   {
-    "label": "Sem nenhum critério: baixo risco",
-    "input": {},
+    "id": "spesi",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Sem nenhum critério: baixo risco",
+    "originalInput": [],
+    "input": {
+      "idade": false,
+      "cancer": false,
+      "cardiopulm": false,
+      "fc": false,
+      "pas": false,
+      "sat": false
+    },
     "expected": {
       "score": 0,
       "level": "low",
       "verdict": "1,0%"
     },
-    "originalInput": [],
-    "expandedZeroOptions": []
+    "recordedResult": {
+      "main": [
+        "0",
+        "pontos"
+      ],
+      "label": "sPESI",
+      "raw": {
+        "score": 0
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Câncer ativo: 1 ponto",
-    "input": {
+    "id": "spesi",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Câncer ativo: 1 ponto",
+    "originalInput": {
       "cancer": true
+    },
+    "input": {
+      "cancer": true,
+      "idade": false,
+      "cardiopulm": false,
+      "fc": false,
+      "pas": false,
+      "sat": false
     },
     "expected": {
       "score": 1,
       "level": "mid"
     },
-    "originalInput": {
-      "cancer": true
+    "recordedResult": {
+      "main": [
+        "1",
+        "ponto"
+      ],
+      "label": "sPESI",
+      "raw": {
+        "score": 1
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
-    "input": {
+    "id": "spesi",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+    "originalInput": {
       "idade": true,
       "fc": true,
       "sat": true
+    },
+    "input": {
+      "idade": true,
+      "fc": true,
+      "sat": true,
+      "cancer": false,
+      "cardiopulm": false,
+      "pas": false
     },
     "expected": {
       "score": 3,
       "level": "mid",
       "verdict": "10,9%"
     },
-    "originalInput": {
-      "idade": true,
-      "fc": true,
-      "sat": true
+    "recordedResult": {
+      "main": [
+        "3",
+        "pontos"
+      ],
+      "label": "sPESI",
+      "raw": {
+        "score": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
