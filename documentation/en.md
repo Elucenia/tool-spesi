@@ -77,3 +77,28 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Low risk: 30-day mortality of 1,0%
+
+Candidate for early discharge or home treatment, if there are no other impediments (Hestia criteria).
+
+
+### 2
+
+Not low risk: 30-day mortality of 10,9%
+
+Intermediate risk by ESC: assess right ventricle (echo or CT angiography) and troponin.
+
+
+### 3
+
+Not low risk: 30-day mortality of 10,9%
+
+Intermediate risk by ESC: assess right ventricle (echo or CT angiography) and troponin.
+

@@ -77,3 +77,28 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Baixo risco: mortalidade em 30 dias de 1,0%
+
+Candidato a alta precoce ou tratamento domiciliar, se não houver outros impeditivos (critérios de Hestia).
+
+
+### 2
+
+Não é baixo risco: mortalidade em 30 dias de 10,9%
+
+Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina.
+
+
+### 3
+
+Não é baixo risco: mortalidade em 30 dias de 10,9%
+
+Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina.
+

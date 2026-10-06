@@ -272,7 +272,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "s PESI/Jimenez 2010:6 variáveisbinárias,0 baixoriscorestantealto; sem PESIoriginal 11 variáveis",
-    "implementationVersion": "spesi@native-2026-10-03+8614704a7c8c",
+    "implementationVersion": "spesi@native-2026-10-05+3e713ddf502e",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/20696966/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -545,7 +545,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+      "implementationHash": "3e713ddf502ea9449c659a106de67944bb50f4911747043c887c6ecb802e774c",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "spesi@native-2026-10-03+8614704a7c8c",
+          "previousImplementationHash": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3",
+          "implementationHash": "3e713ddf502ea9449c659a106de67944bb50f4911747043c887c6ecb802e774c",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "b56c09788ac4e685e837e244b31f7386c285f695909e8b7063439b992a4cb3d3",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "sPESI estima prognóstico em TEP agudo, não confirma nem exclui TEP. Baixo risco no estudo ainda apresentou mortes e não representa autorização isolada de tratamento ambulatorial. Instabilidade, comorbidades, fatores clínicos e condições logísticas devem ser avaliados no protocolo correspondente.",
     "sourceLimitEvidence": {
@@ -564,20 +592,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/spesi/calculator.js",
-    "bytes": 4901,
-    "sha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3"
+    "bytes": 5106,
+    "sha256": "3e713ddf502ea9449c659a106de67944bb50f4911747043c887c6ecb802e774c"
   },
-  "sourceToolSha256": "8e085458f2c990dc67608505f3d8fe355c99b6e341a08c36b85d905de14dec6a",
+  "sourceToolSha256": "c28084234c6e76299d07bd10e27fbb7a4a884c9bd9e098315facab49f749efa0",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "a982daa04d7d659ee817067aff6a3f2a323d9adf82700818799bab9c893584c4",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "a982daa04d7d659ee817067aff6a3f2a323d9adf82700818799bab9c893584c4",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

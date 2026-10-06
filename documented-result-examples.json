@@ -1,0 +1,537 @@
+{
+  "id": "spesi",
+  "implementationVersion": "spesi@native-2026-10-05+3e713ddf502e",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Baixo risco: mortalidade em 30 dias de 1,0%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Candidato a alta precoce ou tratamento domiciliar, se não houver outros impeditivos (critérios de Hestia).",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Não é baixo risco: mortalidade em 30 dias de 10,9%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Não é baixo risco: mortalidade em 30 dias de 10,9%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Low risk: 30-day mortality of 1,0%",
+            "locale": "en",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "Candidate for early discharge or home treatment, if there are no other impediments (Hestia criteria).",
+            "locale": "en",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Not low risk: 30-day mortality of 10,9%",
+            "locale": "en",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Intermediate risk by ESC: assess right ventricle (echo or CT angiography) and troponin.",
+            "locale": "en",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Not low risk: 30-day mortality of 10,9%",
+            "locale": "en",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Intermediate risk by ESC: assess right ventricle (echo or CT angiography) and troponin.",
+            "locale": "en",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Bajo riesgo: mortalidad a 30 días de 1,0%",
+            "locale": "es",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "Candidato a alta precoz o tratamiento domiciliario, si no hay otros impedimentos (criterios de Hestia).",
+            "locale": "es",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "No es de bajo riesgo: mortalidad a 30 días de 10,9%",
+            "locale": "es",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Riesgo intermedio según la ESC: evaluar ventrículo derecho (eco o angiotomografía) y troponina.",
+            "locale": "es",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "No es de bajo riesgo: mortalidad a 30 días de 10,9%",
+            "locale": "es",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Riesgo intermedio según la ESC: evaluar ventrículo derecho (eco o angiotomografía) y troponina.",
+            "locale": "es",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Faible risque : mortalité à 30 jours de 1,0 %",
+            "locale": "fr",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "Candidat à une sortie précoce ou à un traitement à domicile, s’il n’y a pas d’autres contre-indications (critères de Hestia).",
+            "locale": "fr",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Pas de faible risque : mortalité à 30 jours de 10,9 %",
+            "locale": "fr",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Risque intermédiaire selon l’ESC : évaluer le ventricule droit (échocardiographie ou angioscanner) et la troponine.",
+            "locale": "fr",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Pas de faible risque : mortalité à 30 jours de 10,9 %",
+            "locale": "fr",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Risque intermédiaire selon l’ESC : évaluer le ventricule droit (échocardiographie ou angioscanner) et la troponine.",
+            "locale": "fr",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Niedriges Risiko: 30-Tage-Mortalität von 1,0%",
+            "locale": "de",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "Kandidat für eine frühe Entlassung oder eine Behandlung zu Hause, sofern keine anderen Hindernisse bestehen (Hestia-Kriterien).",
+            "locale": "de",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Kein niedriges Risiko: 30-Tage-Mortalität von 10,9%",
+            "locale": "de",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Intermediäres Risiko nach ESC: rechten Ventrikel beurteilen (Echo oder CT-Angiographie) und Troponin.",
+            "locale": "de",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Kein niedriges Risiko: 30-Tage-Mortalität von 10,9%",
+            "locale": "de",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Intermediäres Risiko nach ESC: rechten Ventrikel beurteilen (Echo oder CT-Angiographie) und Troponin.",
+            "locale": "de",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Basso rischio: mortalità a 30 giorni dell'1,0%",
+            "locale": "it",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "Candidato per dimissione precoce o trattamento domiciliare, se non vi sono altri impedimenti (criteri di Hestia).",
+            "locale": "it",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Non è a basso rischio: mortalità a 30 giorni del 10,9%",
+            "locale": "it",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Rischio intermedio secondo ESC: valutare il ventricolo destro (ecocardiogramma o angio-TC) e la troponina.",
+            "locale": "it",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Non è a basso rischio: mortalità a 30 giorni del 10,9%",
+            "locale": "it",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "Rischio intermedio secondo ESC: valutare il ventricolo destro (ecocardiogramma o angio-TC) e la troponina.",
+            "locale": "it",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة منخفضة: وفيات خلال 30 يومًا بنسبة 1,0%",
+            "locale": "ar",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "مرشح للخروج المبكر أو العلاج المنزلي، إذا لم تكن هناك موانع أخرى (معايير هيستيا).",
+            "locale": "ar",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ليس منخفض الخطورة: وفيات خلال 30 يومًا بنسبة 10,9%",
+            "locale": "ar",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "خطورة متوسطة بحسب ESC: تقييم البطين الأيمن (إيكو أو تصوير وعائي طبقي) والتروبونين.",
+            "locale": "ar",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ليس منخفض الخطورة: وفيات خلال 30 يومًا بنسبة 10,9%",
+            "locale": "ar",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "خطورة متوسطة بحسب ESC: تقييم البطين الأيمن (إيكو أو تصوير وعائي طبقي) والتروبونين.",
+            "locale": "ar",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低风险：30天死亡率为1,0%",
+            "locale": "zh",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "如无其他禁忌，可考虑早期出院或居家治疗（Hestia标准）。",
+            "locale": "zh",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "非低风险：30天死亡率为10,9%",
+            "locale": "zh",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "按ESC为中间风险：评估右心室（超声心动图或CT血管造影）和肌钙蛋白。",
+            "locale": "zh",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "非低风险：30天死亡率为10,9%",
+            "locale": "zh",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "按ESC为中间风险：评估右心室（超声心动图或CT血管造影）和肌钙蛋白。",
+            "locale": "zh",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低リスク：30日死亡率1,0%",
+            "locale": "ja",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "他に支障がなければ、早期退院または在宅治療の候補（Hestia基準）。",
+            "locale": "ja",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低リスクではない：30日死亡率10,9%",
+            "locale": "ja",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "ESCでは中等度リスク：右心室（心エコーまたはCT血管造影）とトロポニンを評価する。",
+            "locale": "ja",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低リスクではない：30日死亡率10,9%",
+            "locale": "ja",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "ESCでは中等度リスク：右心室（心エコーまたはCT血管造影）とトロポニンを評価する。",
+            "locale": "ja",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Sem nenhum critério: baixo risco",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम जोखिम: 30 दिनों की मृत्यु दर 1,0%",
+            "locale": "hi",
+            "template": "documented-authored-87f59b00ed7f05b577d0"
+          },
+          "note": {
+            "text": "यदि कोई अन्य बाधा न हो तो शीघ्र छुट्टी या घर पर उपचार के लिए उपयुक्त उम्मीदवार (Hestia मानदंड)।",
+            "locale": "hi",
+            "template": "documented-authored-ae5e88518530ae468c97"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Câncer ativo: 1 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम जोखिम नहीं: 30 दिनों की मृत्यु दर 10,9%",
+            "locale": "hi",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "ESC के अनुसार मध्यम जोखिम: दाएँ निलय (इको या CT एंजियोग्राफी) और ट्रोपोनिन का मूल्यांकन करें।",
+            "locale": "hi",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम जोखिम नहीं: 30 दिनों की मृत्यु दर 10,9%",
+            "locale": "hi",
+            "template": "documented-authored-293159bebb18182fa0ce"
+          },
+          "note": {
+            "text": "ESC के अनुसार मध्यम जोखिम: दाएँ निलय (इको या CT एंजियोग्राफी) और ट्रोपोनिन का मूल्यांकन करें।",
+            "locale": "hi",
+            "template": "documented-authored-930331efea2048db16a8"
+          },
+          "level": "mid"
+        }
+      }
+    ]
+  }
+}

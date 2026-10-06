@@ -77,3 +77,28 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Faible risque : mortalité à 30 jours de 1,0 %
+
+Candidat à une sortie précoce ou à un traitement à domicile, s’il n’y a pas d’autres contre-indications (critères de Hestia).
+
+
+### 2
+
+Pas de faible risque : mortalité à 30 jours de 10,9 %
+
+Risque intermédiaire selon l’ESC : évaluer le ventricule droit (échocardiographie ou angioscanner) et la troponine.
+
+
+### 3
+
+Pas de faible risque : mortalité à 30 jours de 10,9 %
+
+Risque intermédiaire selon l’ESC : évaluer le ventricule droit (échocardiographie ou angioscanner) et la troponine.
+

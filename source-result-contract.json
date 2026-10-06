@@ -1,0 +1,180 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "spesi",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "4767e798c41ee074740ea2cd3fa7f19735c7ed0c",
+    "oldEngineSha256": "8614704a7c8c86a852eba2977033f0d9edb707bcd51412979422282e8a6392a3",
+    "currentEngineSha256": "3e713ddf502ea9449c659a106de67944bb50f4911747043c887c6ecb802e774c"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Sem nenhum critério: baixo risco",
+      "input": {
+        "idade": false,
+        "cancer": false,
+        "cardiopulm": false,
+        "fc": false,
+        "pas": false,
+        "sat": false
+      },
+      "publicOutput": {
+        "id": "spesi",
+        "main": [
+          "0",
+          "pontos"
+        ],
+        "label": "sPESI",
+        "raw": {
+          "score": 0
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 0,
+        "level": "low",
+        "verdict": "1,0%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0",
+          "pontos"
+        ],
+        "label": "sPESI",
+        "level": "low",
+        "verdict": "Baixo risco: mortalidade em 30 dias de 1,0%",
+        "note": "Candidato a alta precoce ou tratamento domiciliar, se não houver outros impeditivos (critérios de Hestia).",
+        "raw": {
+          "score": 0
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Câncer ativo: 1 ponto",
+      "input": {
+        "cancer": true,
+        "idade": false,
+        "cardiopulm": false,
+        "fc": false,
+        "pas": false,
+        "sat": false
+      },
+      "publicOutput": {
+        "id": "spesi",
+        "main": [
+          "1",
+          "ponto"
+        ],
+        "label": "sPESI",
+        "raw": {
+          "score": 1
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 1,
+        "level": "mid"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "1",
+          "ponto"
+        ],
+        "label": "sPESI",
+        "level": "mid",
+        "verdict": "Não é baixo risco: mortalidade em 30 dias de 10,9%",
+        "note": "Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina.",
+        "raw": {
+          "score": 1
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "85 anos, FC 118 e SatO₂ 88%: 3 pontos",
+      "input": {
+        "idade": true,
+        "fc": true,
+        "sat": true,
+        "cancer": false,
+        "cardiopulm": false,
+        "pas": false
+      },
+      "publicOutput": {
+        "id": "spesi",
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "sPESI",
+        "raw": {
+          "score": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 3,
+        "level": "mid",
+        "verdict": "10,9%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "sPESI",
+        "level": "mid",
+        "verdict": "Não é baixo risco: mortalidade em 30 dias de 10,9%",
+        "note": "Risco intermediário pela ESC: avaliar ventrículo direito (eco ou angiotomografia) e troponina.",
+        "raw": {
+          "score": 3
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

@@ -77,3 +77,28 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Niedriges Risiko: 30-Tage-Mortalität von 1,0%
+
+Kandidat für eine frühe Entlassung oder eine Behandlung zu Hause, sofern keine anderen Hindernisse bestehen (Hestia-Kriterien).
+
+
+### 2
+
+Kein niedriges Risiko: 30-Tage-Mortalität von 10,9%
+
+Intermediäres Risiko nach ESC: rechten Ventrikel beurteilen (Echo oder CT-Angiographie) und Troponin.
+
+
+### 3
+
+Kein niedriges Risiko: 30-Tage-Mortalität von 10,9%
+
+Intermediäres Risiko nach ESC: rechten Ventrikel beurteilen (Echo oder CT-Angiographie) und Troponin.
+
